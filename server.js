@@ -16,8 +16,16 @@ app.use("/", routes);
 
 var db = process.env.MONGODB_URI || "mongodb://something:mew123@ds143892.mlab.com:43892/heroku_j33t45kd";
 
+var options = {
+  db: { native_parser: true },
+  server: { poolSize: 5 },
+  replset: { rs_name: 'myReplicaSetName' }
+}
+
+options.server.socketOptions = options.replset.socketOptions = { keepAlive: 120 };
+
 // Connect mongoose to our database
-mongoose.connect(db, function(error) {
+mongoose.connect(db, options, function(error) {
   // Log any errors connecting with mongoose
   if (error) {
     console.error(error);
