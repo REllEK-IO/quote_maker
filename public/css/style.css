@@ -1,0 +1,38 @@
+/* Styles go here */
+textarea{
+	padding: 20px;
+}
+.navbar{
+	padding: 50px;
+}
+
+.full{
+	width: 100%;
+}
+
+.btn-success{
+	margin-top: 20px;
+	margin-right: 50px;
+}
+
+.fa-arrow-right{
+	font-size: small;
+	padding-left: 8px;
+}
+
+.fancy {
+	font-family: 'Bellefair', serif;
+	font-size: 36px;
+	padding: 20px;
+}
+
+.block-quote{
+	border : 1px dotted grey;
+	border-radius: 7px;
+	box-shadow: 0 1px 1px silver;
+	border-top-color: white;
+}
+
+.flat{
+	border: 0;
+}
